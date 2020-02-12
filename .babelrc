@@ -1,0 +1,3 @@
+{
+  "presets": ["@babel/preset-env"] // entende qual ambiente estrou trabalhando e converte as features do ES6+ e converte para mais antigas
+}
