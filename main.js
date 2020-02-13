@@ -1,53 +1,18 @@
-class List {
-  constructor() {
-    this.data = [];
-  }
+const a = 1;
 
-  add(data) {
-    this.data.push(data);
-    console.log(this.data);
-  }
-}
+// a = 3; // não funciona, pois é constante (read-only). não pode reatribuir valor
 
-class TodoList extends List{
-  constructor() {
-    super(); // chamando constructor() da classe pai
-    this.usuario = 'Cadu';
-  }
+const usuario = { nome: 'Cadu' };
+usuario.nome = 'Eduardo'; // mutação funciona, o que é diferente de reatribuição
 
-  mostraUsuario() {
-    console.log(this.usuario);
+console.log(usuario);
+/* ------------------------------------------------ */
+
+function teste(x) {
+  let y = 2;
+  if(x > 5) {
+    console.log(x, y); // aqui ele enxerga o y
   }
 }
-
-var MinhaLista = new TodoList();
-document.getElementById('novoTodo').onclick = function() {
-  MinhaLista.add('Novo ToDo');
-}
-
-MinhaLista.mostraUsuario();
-
-/* ---------------------------------------------------------- */
-// Métodos static
-
-class TodoList2 {
-  constructor() {
-    this.todos = [];
-  }
-
-  static addTodo() {
-    this.todos.push('Novo ToDo');
-    console.log(this.todos);
-  }
-}
-
-// TodoList2.addTodo(); // não funciona, pois método static não enxerga o 'this'. Serve para receber informação, processar e devolver
-// classe que tem static geralmente não tem contrutor
-
-class Matematica {
-  static soma(a, b) {
-    return a + b;
-  }
-}
-
-console.log(Matematica.soma(1, 2));
+// console.log(y); não funciona, pois variáveis do tipo 'let' são de escopo
+teste(10);
