@@ -1,21 +1,27 @@
-const arr = [1, 2, 4, 5, 8, 9, 12];
-const newArr = arr.map(function(item, index) { // a variável da função recebe cada item do array mapeado
-  return item * 2; // e retorna ele multiplicado por 2 pra dentro do novo array, neste caso.
-  // return item + index; // também poderia ser dessa forma, pois também podemos utilizar o índice do array
+const arr = [1, 3, 4, 5, 6];
+const newArr = arr.map((item) => { // Arrow function. não precisa usar o nome function (por ser anônima), e após o parâmetro, usar '=>'
+  return item * 2;
 });
 console.log(newArr);
 
-const sum = arr.reduce(function(total, next) { // variáveis para trabalhar a cada iteração, sendo 'next' o item iterado
-  return total + next; // vai somando cada item
+const newArr2 = arr.map(item => { // Outra forma: quando tem apenas 1 parâmetro, não precisa do '(param)'
+  return item * 2;
 });
-console.log(sum);
+console.log(newArr2);
 
-const filter = arr.filter(function(item) { // o filter faz com que cada item fique ou não no novo array se a condição da função for true
-  return item % 2 === 0; // deixando ficar no array apenas os pares.
-});
-console.log(filter);
+const newArr3 = arr.map(item => item * 2); // Outra forma: quando tem apenas o return <código>, não precisa do '{ return ... }'
+console.log(newArr3);
 
-const find = arr.find(function(item) { // procura dentro do array e retorna os que retornarem true dentro da função
-  return item === 4; // procurando itens igual a 4. se não encontrar, vai retornar 'undefined'.
-});
-console.log(find);
+const teste = () => { // também é possível criar funções arrow dessa forma, porém recomenda-se usar 'function'
+  return 'teste';
+}
+console.log(teste());
+
+const teste2 = () => 'teste'; // assim também funciona
+console.log(teste2());
+
+const retornaArr = () => [1, 2, 3];
+console.log(retornaArr());
+
+const retornaObj = () => ({ nome: 'Cadu' }); // para retornar objeto, deve-se usar parênteses em volta das chaves
+console.log(retornaObj); 

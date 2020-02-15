@@ -1,24 +1,47 @@
 "use strict";
 
-var arr = [1, 2, 4, 5, 8, 9, 12];
-var newArr = arr.map(function (item, index) {
-  // a variável da função recebe cada item do array mapeado
-  return item * 2; // e retorna ele multiplicado por 2 pra dentro do novo array, neste caso.
-  // return item + index; // também poderia ser dessa forma, pois também podemos utilizar o índice do array
+var arr = [1, 3, 4, 5, 6];
+var newArr = arr.map(function (item) {
+  // Arrow function. não precisa usar o nome function (por ser anônima), e após o parâmetro, usar '=>'
+  return item * 2;
 });
 console.log(newArr);
-var sum = arr.reduce(function (total, next) {
-  // variáveis para trabalhar a cada iteração, sendo 'next' o item iterado
-  return total + next; // vai somando cada item
+var newArr2 = arr.map(function (item) {
+  // Outra forma: quando tem apenas 1 parâmetro, não precisa do '(param)'
+  return item * 2;
 });
-console.log(sum);
-var filter = arr.filter(function (item) {
-  // o filter faz com que cada item fique ou não no novo array se a condição da função for true
-  return item % 2 === 0; // deixando ficar no array apenas os pares.
-});
-console.log(filter);
-var find = arr.find(function (item) {
-  // procura dentro do array e retorna os que retornarem true dentro da função
-  return item === 4; // procurando itens igual a 4. se não encontrar, vai retornar 'undefined'.
-});
-console.log(find);
+console.log(newArr2);
+var newArr3 = arr.map(function (item) {
+  return item * 2;
+}); // Outra forma: quando tem apenas o return <código>, não precisa do '{ return ... }'
+
+console.log(newArr3);
+
+var teste = function teste() {
+  // também é possível criar funções arrow dessa forma, porém recomenda-se usar 'function'
+  return 'teste';
+};
+
+console.log(teste());
+
+var teste2 = function teste2() {
+  return 'teste';
+}; // assim também funciona
+
+
+console.log(teste2());
+
+var retornaArr = function retornaArr() {
+  return [1, 2, 3];
+};
+
+console.log(retornaArr());
+
+var retornaObj = function retornaObj() {
+  return {
+    nome: 'Cadu'
+  };
+}; // para retornar objeto, deve-se usar parênteses em volta das chaves
+
+
+console.log(retornaObj);
