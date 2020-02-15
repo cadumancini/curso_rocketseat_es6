@@ -1,4 +1,25 @@
-const soma = (a = 3, b = 6) => a + b;
+const usuario = {
+  nome: 'Cadu',
+  idade: 27,
+  endereco: {
+    cidade: 'Matão',
+    uf: 'SP'
+  },
+};
 
-console.log(soma(1)); // como foi passado apenas 1 parâmetro, o JS entende como sendo o primeiro, e atribui o valor padrâo para b.
-console.log(soma()); // usa o valor padrâo para os dois parâmetros
+// forma padrão:
+//const nome = usuario.nome;
+//const idade = usuario.idade;
+//const cidade = usuario.endereco.cidade;
+
+// usando desestruturação:
+const { nome, idade, endereco: { cidade } } = usuario; // aliementa as três variáveis
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+
+function mostraNomeIdade({nome, idade}) { // pode-se passar os atributos do objeto como um novo objeto no parâmetro da função
+  console.log(nome, idade);
+}
+
+mostraNomeIdade(usuario);

@@ -1,11 +1,31 @@
 "use strict";
 
-var soma = function soma() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
-  return a + b;
-};
+var usuario = {
+  nome: 'Cadu',
+  idade: 27,
+  endereco: {
+    cidade: 'Matão',
+    uf: 'SP'
+  }
+}; // forma padrão:
+//const nome = usuario.nome;
+//const idade = usuario.idade;
+//const cidade = usuario.endereco.cidade;
+// usando desestruturação:
 
-console.log(soma(1)); // como foi passado apenas 1 parâmetro, o JS entende como sendo o primeiro, e atribui o valor padrâo para b.
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade; // aliementa as três variáveis
 
-console.log(soma()); // usa o valor padrâo para os dois parâmetros
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+
+function mostraNomeIdade(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  // pode-se passar os atributos do objeto como um novo objeto no parâmetro da função
+  console.log(nome, idade);
+}
+
+mostraNomeIdade(usuario);
