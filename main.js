@@ -24,4 +24,4 @@ const retornaArr = () => [1, 2, 3];
 console.log(retornaArr());
 
 const retornaObj = () => ({ nome: 'Cadu' }); // para retornar objeto, deve-se usar parênteses em volta das chaves
-console.log(retornaObj); 
+console.log(retornaObj()); 

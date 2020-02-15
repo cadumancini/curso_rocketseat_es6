@@ -44,4 +44,4 @@ var retornaObj = function retornaObj() {
 }; // para retornar objeto, deve-se usar parênteses em volta das chaves
 
 
-console.log(retornaObj);
+console.log(retornaObj());
