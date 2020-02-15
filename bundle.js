@@ -2,4 +2,10 @@
 
 var nome = 'Cadu';
 var idade = 27;
-console.log("Meu nome \xE9 ".concat(nome, " e tenho ").concat(idade, " anos.")); // utilizar crase para abrir e fechar o texto
+var usuario = {
+  // quando o atributo vai ser o mesmo nome da variável, não precisa fazer algo como 'nome: nome,'
+  nome: nome,
+  idade: idade,
+  Cidade: 'Matão'
+};
+console.log(usuario);

@@ -1,4 +1,9 @@
 const nome = 'Cadu';
 const idade = 27;
 
-console.log(`Meu nome é ${nome} e tenho ${idade} anos.`); // utilizar crase para abrir e fechar o texto
+const usuario = { // quando o atributo vai ser o mesmo nome da variável, não precisa fazer algo como 'nome: nome,'
+  nome,
+  idade,
+  Cidade: 'Matão'
+};
+console.log(usuario);
