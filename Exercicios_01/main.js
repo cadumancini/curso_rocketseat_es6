@@ -98,6 +98,6 @@ console.log(cidadeExe04);
 console.log(estadoExe04); 
 
 function mostraInfo({nome, idade}) {
-  return `${usuario.nome} tem ${usuario.idade} anos.`;
+  return `${nome} tem ${idade} anos.`;
  }
  console.log(mostraInfo({ nome: 'Diego', idade: 23 }));

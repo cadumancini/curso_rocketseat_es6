@@ -167,7 +167,7 @@ console.log(estadoExe04);
 function mostraInfo(_ref) {
   var nome = _ref.nome,
       idade = _ref.idade;
-  return "".concat(usuario.nome, " tem ").concat(usuario.idade, " anos.");
+  return "".concat(nome, " tem ").concat(idade, " anos.");
 }
 
 console.log(mostraInfo({
