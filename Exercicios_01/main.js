@@ -134,9 +134,6 @@ console.log(usuario2);
 const usuario3 = {...usuario, endereco: {...usuario.endereco, cidade: 'Lontras'}};
 console.log(usuario3);
 
-COMENTANDO PARA NÃO DAR PROBLEMAS EM VARIAVEIS
-*/
-
 // Exercicio 06:
 console.log('---------------------------------------------------------');
 console.log('Exercício 06:');
@@ -144,3 +141,20 @@ console.log('Exercício 06:');
 const usuario = 'Diego';
 const idade = 23;
 console.log(`O usuário ${usuario} possuio ${idade} anos.`);
+
+COMENTANDO PARA NÃO DAR PROBLEMAS EM VARIAVEIS
+*/
+
+// Exercicio 07:
+console.log('---------------------------------------------------------');
+console.log('Exercício 07:');
+
+const nome = 'Diego';
+const idade = 23;
+
+const usuario = {
+  nome,
+  idade,
+  codade: 'Rio do Sul',
+};
+console.log(usuario);
