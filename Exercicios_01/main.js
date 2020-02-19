@@ -78,4 +78,26 @@ console.log(mostraUsuario(nome, idade));
 
 // 3.4
 const promise = () => new Promise((resolve, reject) => resolve());
-console.log(promise());
+console.log(promise());  
+
+// Exercicio 04:
+console.log('---------------------------------------------------------');
+console.log('Exercício 04:');
+
+const empresaExe04 = {
+  nomeExe04: 'Rocketseat',
+  enderecoExe04: {
+    cidadeExe04: 'Rio do Sul',
+    estadoExe04: 'SC',
+  }
+};
+
+const { nomeExe04, enderecoExe04: { cidadeExe04, estadoExe04 } } = empresaExe04;
+console.log(nomeExe04);
+console.log(cidadeExe04);
+console.log(estadoExe04); 
+
+function mostraInfo({nome, idade}) {
+  return `${usuario.nome} tem ${usuario.idade} anos.`;
+ }
+ console.log(mostraInfo({ nome: 'Diego', idade: 23 }));

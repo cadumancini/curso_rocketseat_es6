@@ -145,4 +145,32 @@ var promise = function promise() {
   });
 };
 
-console.log(promise());
+console.log(promise()); // Exercicio 04:
+
+console.log('---------------------------------------------------------');
+console.log('Exercício 04:');
+var empresaExe04 = {
+  nomeExe04: 'Rocketseat',
+  enderecoExe04: {
+    cidadeExe04: 'Rio do Sul',
+    estadoExe04: 'SC'
+  }
+};
+var nomeExe04 = empresaExe04.nomeExe04,
+    _empresaExe04$enderec = empresaExe04.enderecoExe04,
+    cidadeExe04 = _empresaExe04$enderec.cidadeExe04,
+    estadoExe04 = _empresaExe04$enderec.estadoExe04;
+console.log(nomeExe04);
+console.log(cidadeExe04);
+console.log(estadoExe04);
+
+function mostraInfo(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  return "".concat(usuario.nome, " tem ").concat(usuario.idade, " anos.");
+}
+
+console.log(mostraInfo({
+  nome: 'Diego',
+  idade: 23
+}));
