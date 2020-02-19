@@ -103,9 +103,6 @@ function mostraInfo({nome, idade}) {
 }
 console.log(mostraInfo({ nome: 'Diego', idade: 23 }));
 
-COMENTANDO PARA NÃO DAR PROBLEMAS EM VARIAVEIS
-*/
-
 // Exercicio 05:
 console.log('---------------------------------------------------------');
 console.log('Exercício 05:');
@@ -136,3 +133,14 @@ const usuario2 = {...usuario, nome: 'Gabriel'};
 console.log(usuario2);
 const usuario3 = {...usuario, endereco: {...usuario.endereco, cidade: 'Lontras'}};
 console.log(usuario3);
+
+COMENTANDO PARA NÃO DAR PROBLEMAS EM VARIAVEIS
+*/
+
+// Exercicio 06:
+console.log('---------------------------------------------------------');
+console.log('Exercício 06:');
+
+const usuario = 'Diego';
+const idade = 23;
+console.log(`O usuário ${usuario} possuio ${idade} anos.`);
