@@ -90,11 +90,11 @@
 /*!**********************!*\
   !*** ./functions.js ***!
   \**********************/
-/*! exports provided: soma */
+/*! exports provided: soma, sub, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./functions.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sub\", function() { return sub; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return showName; });\nfunction soma(a, b) {\n  return a + b;\n}\nfunction sub(a, b) {\n  return a - b;\n}\nfunction showName(nome, sobrenome) {\n  // pode-se trazer com 'default' uma função/classe/etc, para ser importado\n  return \"\".concat(nome, \" \").concat(sobrenome);\n}\n\n//# sourceURL=webpack:///./functions.js?");
 
 /***/ }),
 
@@ -106,7 +106,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ \"./functions.js\");\n\nconsole.log(Object(_functions__WEBPACK_IMPORTED_MODULE_0__[\"soma\"])(2, 3));\n\n//# sourceURL=webpack:///./main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ \"./functions.js\");\n/* harmony import */ var _mult__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mult */ \"./mult.js\");\n // importando quando tem mais de uma função/classe/etc no arquivo\n// e também pode-se dar um alias.\n// fora do objeto, trazer o que tem 'default' no arquivo\n\n // outra forma de fazer, quando tem apenas uma função/classe/etc\n//import multFunction from './mult' // pode-se inclusive mudar o nome ao importar\n\n // para trazer todos os itens no import, e ser chamado com 'prefixo'. (...)\n\nconsole.log(Object(_functions__WEBPACK_IMPORTED_MODULE_0__[\"soma\"])(2, 3));\nconsole.log(Object(_functions__WEBPACK_IMPORTED_MODULE_0__[\"sub\"])(4, 2));\nconsole.log(Object(_mult__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(10, 3));\nconsole.log(Object(_functions__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('Carlos', 'Mancini'));\nconsole.log(_functions__WEBPACK_IMPORTED_MODULE_0__[\"soma\"](2, 10));\n\n//# sourceURL=webpack:///./main.js?");
+
+/***/ }),
+
+/***/ "./mult.js":
+/*!*****************!*\
+  !*** ./mult.js ***!
+  \*****************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return mult; });\nfunction mult(a, b) {\n  // quando vai exportar só uma função/classe/etc usa-se o 'default'\n  return a * b;\n}\n\n//# sourceURL=webpack:///./mult.js?");
 
 /***/ })
 
