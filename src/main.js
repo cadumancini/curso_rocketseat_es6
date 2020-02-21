@@ -1,0 +1,1 @@
+alert('Teste!'); // O webpack-dev-server automaticamente atualiza a página ao notar uma alteração no arquivo
