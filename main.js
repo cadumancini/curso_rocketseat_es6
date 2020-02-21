@@ -1,9 +1,3 @@
-const nome = 'Cadu';
-const idade = 27;
+import { soma } from './functions';
 
-const usuario = { // quando o atributo vai ser o mesmo nome da variável, não precisa fazer algo como 'nome: nome,'
-  nome,
-  idade,
-  Cidade: 'Matão'
-};
-console.log(usuario);
+console.log(soma(2, 3));
